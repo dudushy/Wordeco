@@ -33,7 +33,6 @@ This site was built using [GitHub Pages](https://pages.github.com/).
 ![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
 <br>
 ![This is an image](concept.png)
-![aaa](Heiwa%20Cannon%20SMall.gif)
 
 - George Washington
 - John Adams
