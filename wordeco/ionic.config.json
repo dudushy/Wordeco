@@ -1,7 +1,0 @@
-{
-  "name": "wordeco",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "angular"
-}
