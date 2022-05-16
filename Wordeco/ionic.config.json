@@ -1,0 +1,7 @@
+{
+  "name": "Wordeco",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
