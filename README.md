@@ -59,6 +59,8 @@
 1. Install [Android Studio](https://developer.android.com/studio#downloads) with all SKD and Platform Tools [needed](https://ionicframework.com/docs/developing/android).
 
 1. Generate `.apk` (Android):
+    - Delete `www` folder
+    
     ```bash
     ionic cordova run android --aot
     ```
@@ -66,13 +68,3 @@
     ```bash
     ? May Cordova anonymously report usage statistics to improve the tool over time? (Y/n) n
     ```
-> New error:
-
-```bash
-> cordova.cmd build android
-Checking Java JDK and Android SDK versions
-ANDROID_SDK_ROOT=undefined (recommended setting)
-ANDROID_HOME=undefined (DEPRECATED)
-Failed to find 'JAVA_HOME' environment variable. Try setting it manually.
-[ERROR] An error occurred while running subprocess cordova.
-```
