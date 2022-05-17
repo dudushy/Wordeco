@@ -56,7 +56,7 @@
     npm i -g native-run
     ```
 
-1. Install [Android Studio](https://developer.android.com/studio#downloads) with all SKD and Platform Tools [needed](https://ionicframework.com/docs/developing/android).
+1. Install [Android Studio](https://developer.android.com/studio#downloads) with all SDK and Platform Tools [needed](https://ionicframework.com/docs/developing/android).
 
 1. Generate `.apk` (Android):
     - Delete `www` folder
