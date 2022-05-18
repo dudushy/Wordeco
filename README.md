@@ -83,5 +83,5 @@ ionic cordova run android --aot
 ### Making the App
 1. Generate Homepage:
     ```bash
-    ionic generate page home
+    ionic generate page homepage
     ```
