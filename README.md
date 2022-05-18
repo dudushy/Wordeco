@@ -8,6 +8,7 @@
 
 - [Making the App](#making-the-app)
 
+---
 ### Starting Project
 
 1. Download [Node.js](https://nodejs.org/en/download/).
