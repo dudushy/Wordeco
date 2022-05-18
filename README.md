@@ -1,6 +1,15 @@
 # Wordeco
+> DESCRIPTION
 
-## Steps we did
+## Topics
+- [Starting Project](#starting-project)
+
+- [Generating `.apk` (Android)](#generating-apk-android)
+
+- [Making the App](#making-the-app)
+
+### Starting Project
+
 1. Download [Node.js](https://nodejs.org/en/download/).
 
 1. Install `npm`:
@@ -58,13 +67,21 @@
 
 1. Install [Android Studio](https://developer.android.com/studio#downloads) with all SDK and Platform Tools [needed](https://ionicframework.com/docs/developing/android).
 
-1. Generate `.apk` (Android):
-    - Delete `www` folder
-    
-    ```bash
-    ionic cordova run android --aot
-    ```
+---
+### Generating `.apk` (Android)
+- Delete `www` folder
 
+```bash
+ionic cordova run android --aot
+```
+
+```bash
+? May Cordova anonymously report usage statistics to improve the tool over time? (Y/n) n
+```
+
+---
+### Making the App
+1. Generate Homepage:
     ```bash
-    ? May Cordova anonymously report usage statistics to improve the tool over time? (Y/n) n
+    ionic generate page home
     ```
