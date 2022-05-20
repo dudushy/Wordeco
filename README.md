@@ -1,5 +1,10 @@
-# Wordeco
-> DESCRIPTION
+<p align="center">
+    <img src="draft/3Wordeco.png" alt="logoWordeco">
+</p>
+<h1 align="center">Wordeco</h1>
+<h3 align="center"><em>DESCRIPTION</em></h3>
+
+> Made by [dudushy](https://github.com/dudushy) and [Shiyinochi](https://github.com/Shiyinochi)
 
 ## Topics
 - [Starting Project](#starting-project)
