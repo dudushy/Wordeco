@@ -80,20 +80,20 @@
     ```
 
     - :question: How would you like to use ESLint? · `problems`
-    <br>
+    
     - :question: What type of modules does your project use? · `none`
-    <br>
+    
     - :question: Which framework does your project use? · `none`
-    <br>
+    
     - :question: Does your project use TypeScript? · `Yes`
-    <br>
+    
     - :question: Where does your code run? · `browser, node`
-    <br>
+    
     - :question: What format do you want your config file to be in? · `JavaScript`
-    <br>
+    
     - @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest
         - :question: Would you like to install them now? · `Yes`
-        <br>
+        
         - :question: Which package manager do you want to use? · `npm`
 
 
