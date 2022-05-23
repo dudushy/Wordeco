@@ -6,6 +6,9 @@
 
 > Made by [dudushy](https://github.com/dudushy) and [Shiyinochi](https://github.com/Shiyinochi)
 
+<details>
+    <summary><h2>How we made it</h2></summary>
+    
 ## Topics
 - [Starting Project](#starting-project)
 
@@ -80,20 +83,20 @@
     ```
 
     - :question: How would you like to use ESLint? · `problems`
-    
+
     - :question: What type of modules does your project use? · `none`
-    
+
     - :question: Which framework does your project use? · `none`
-    
+
     - :question: Does your project use TypeScript? · `Yes`
-    
+
     - :question: Where does your code run? · `browser, node`
-    
+
     - :question: What format do you want your config file to be in? · `JavaScript`
-    
+
     - @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest
         - :question: Would you like to install them now? · `Yes`
-        
+
         - :question: Which package manager do you want to use? · `npm`
 
 
@@ -113,3 +116,4 @@ $ ionic cordova run android --aot
     ```bash
     $ ionic generate page home
     ```
+</details>
