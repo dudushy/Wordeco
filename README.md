@@ -116,4 +116,6 @@ $ ionic cordova run android --aot
     ```bash
     $ ionic generate page home
     ```
+
+---
 </details>
