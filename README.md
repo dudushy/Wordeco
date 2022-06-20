@@ -14,6 +14,8 @@
 
 - [Generating `.apk` (Android)](#generating-apk-android)
 
+- [Running the App (Android)](#running-the-app-android)
+
 - [Making the App](#making-the-app)
 
 ### Starting Project
@@ -108,6 +110,12 @@
 $ ionic cordova build android --aot
 
 ? May Cordova anonymously report usage statistics to improve the tool over time? (Y/n) n
+```
+
+---
+### Running the App (Android)
+```bash
+$ ionic cordova run android --aot --livereload
 ```
 
 ---
