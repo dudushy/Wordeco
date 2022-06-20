@@ -105,7 +105,7 @@
 - Delete `www` folder
 
 ```bash
-$ ionic cordova run android --aot
+$ ionic cordova build android --aot
 
 ? May Cordova anonymously report usage statistics to improve the tool over time? (Y/n) n
 ```
