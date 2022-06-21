@@ -2,7 +2,7 @@
     <img src="draft/3Wordeco.png" alt="logoWordeco">
 </p>
 <h1 align="center">Wordeco</h1>
-<h3 align="center"><em>DESCRIPTION</em></h3>
+<h3 align="center"><em>Wordeco is a mobile game about finding the correct word within the certain amount of tries that you are given to do so.</em></h3>
 
 > Made by [dudushy](https://github.com/dudushy) and [Shiyinochi](https://github.com/Shiyinochi)
 
