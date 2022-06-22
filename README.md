@@ -114,6 +114,8 @@ $ ionic cordova build android --aot
 
 ---
 ### Running the App (Android)
+- Delete `www` folder
+
 ```bash
 $ cordova clean
 ```
