@@ -125,5 +125,9 @@ $ ionic cordova run android --aot --livereload
     $ ionic generate page home
     ```
 
+1. Generate Game:
+    ```bash
+    $ ionic generate page game
+    ```
 ---
 </details>
