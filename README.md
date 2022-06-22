@@ -115,6 +115,9 @@ $ ionic cordova build android --aot
 ---
 ### Running the App (Android)
 ```bash
+$ cordova clean
+```
+```bash
 $ ionic cordova run android --aot --livereload
 ```
 
