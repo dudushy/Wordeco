@@ -15,6 +15,12 @@ import { Platform, AlertController } from '@ionic/angular';
 export class GamePage implements OnInit {
   TITLE = 'GamePage';
 
+  gameCfg: any = {
+    word: 'wada',
+    rows: 6,
+    columns: 5
+  }
+
   constructor(
     public db: DbService,
     private cdr: ChangeDetectorRef,
@@ -31,6 +37,13 @@ export class GamePage implements OnInit {
 
   ionViewDidEnter(): void {
     console.log(`[${this.TITLE}#ionViewDidEnter]`);
+
+    this.gameCfg = {
+      word: this.db.get('word') || 'wada',
+      rows: this.db.get('rows') || 6,
+      columns: this.db.get('columns') || 5,
+    };
+    console.log(`[${this.TITLE}#ionViewDidEnter] gameCfg`, this.gameCfg);
 
     this.platform.ready().then((readySource) => {
       console.log(`[${this.TITLE}#ionViewDidEnter] readySource`, readySource);
