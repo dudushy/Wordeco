@@ -2,21 +2,22 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  // },
-  {
-    path: '',
-    loadChildren: () => import('./homepage/homepage.module').then( m => m.HomepagePageModule)
-  },
   {
     path: 'homepage',
-    loadChildren: () => import('./homepage/homepage.module').then( m => m.HomepagePageModule)
-  },  {
+    loadChildren: () => import('./pages/homepage/homepage.module').then(m => m.HomepagePageModule)
+  },
+  {
     path: 'game',
-    loadChildren: () => import('./game/game.module').then( m => m.GamePageModule)
+    loadChildren: () => import('./pages/game/game.module').then(m => m.GamePageModule)
+  },
+  {
+    path: 'config',
+    loadChildren: () => import('./pages/config/config.module').then( m => m.ConfigPageModule)
+  },  {
+    path: 'dev-menu',
+    loadChildren: () => import('./pages/dev-menu/dev-menu.module').then( m => m.DevMenuPageModule)
   }
+
 
 ];
 @NgModule({
@@ -25,4 +26,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
