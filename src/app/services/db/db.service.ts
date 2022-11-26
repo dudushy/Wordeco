@@ -18,9 +18,17 @@ export class DbService {
 
     const theme = this.get('theme');
     console.log(`[${this.TITLE}#setupDb] theme`, theme);
-
     if (!theme) { this.set('theme', 'dark'); }
+
     this.set('base_url', 'homepage');
+
+    const rows = this.get('rows');
+    console.log(`[${this.TITLE}#setupDb] rows`, rows);
+    if (!rows) { this.set('rows', '6'); }
+
+    const columns = this.get('columns');
+    console.log(`[${this.TITLE}#setupDb] columns`, columns);
+    if (!columns) { this.set('columns', '5'); }
   }
 
   get(item: any): any {
