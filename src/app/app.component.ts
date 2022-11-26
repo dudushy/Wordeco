@@ -23,9 +23,9 @@ export class AppComponent {
     console.log(`[${this.TITLE}#constructor]`);
 
     const lastPage = this.db.get('last_page');
-    console.log(console.log(`[${this.TITLE}#constructor] lastPage`, lastPage));
+    console.log(`[${this.TITLE}#constructor] lastPage`, lastPage);
 
-    if (!lastPage) {
+    if (lastPage == null) {
       this.redirectTo(this.db.get('base_url'), this.TITLE);
     } else {
       this.redirectTo(lastPage, this.TITLE);
@@ -87,8 +87,10 @@ export class AppComponent {
     this.router.navigateByUrl(`/${url}`);
 
     this.db.set('current_url', url);
-    this.db.set('last_page', url);
     console.log(`[${this.TITLE}#redirectTo] current_url`, this.db.get('current_url'));
+
+    this.db.set('last_page', url);
+    console.log(`[${this.TITLE}#redirectTo] last_page`, this.db.get('last_page'));
 
     this.updateView(this.TITLE);
   }
