@@ -15,6 +15,7 @@ import { Platform, AlertController } from '@ionic/angular';
 export class DevMenuPage implements OnInit {
   TITLE = 'DevMenuPage';
 
+  secretWord: any;
   filteredPages = [];
 
   constructor(
@@ -72,5 +73,12 @@ export class DevMenuPage implements OnInit {
     const { role } = await alert.onDidDismiss();
     console.log(`[${this.TITLE}#showAlert] role`, role);
     return role;
+  }
+
+  saveAndRedirect(value): void {
+    console.log(`[${this.TITLE}#saveAndRedirect] secretWord`, value);
+
+    this.db.set('word', value);
+    this.redirectTo('homepage');
   }
 }

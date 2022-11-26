@@ -1,4 +1,15 @@
 <ion-content fullscreen [attr.theme]="app.theme">
+  <div id="wordDiv">
+    <ion-item counter>
+      <ion-label position="floating">Secret Word</ion-label>
+      <ion-input #secretWord clearInput maxlength="{{db.get('columns')}}"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" color="success" (click)="saveAndRedirect(secretWord.value)">Save</ion-button>
+  </div>
+
+  <br>
+
   <ion-button *ngFor="let page of filteredPages | keyvalue : defaultSort" (click)="redirectTo(page.value)" expand="block">
     {{page.value}}
   </ion-button>
