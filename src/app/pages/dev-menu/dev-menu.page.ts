@@ -5,6 +5,8 @@ import { DbService } from '../../services/db/db.service';
 
 import { AppComponent } from '../../app.component';
 
+import { Platform, AlertController } from '@ionic/angular';
+
 @Component({
   selector: 'app-dev-menu',
   templateUrl: './dev-menu.page.html',
@@ -18,7 +20,9 @@ export class DevMenuPage implements OnInit {
   constructor(
     public db: DbService,
     private cdr: ChangeDetectorRef,
-    public app: AppComponent
+    public app: AppComponent,
+    public platform: Platform,
+    public alertController: AlertController
   ) {
     console.log(`[${this.TITLE}#constructor]`);
   }
@@ -31,6 +35,10 @@ export class DevMenuPage implements OnInit {
     console.log(`[${this.TITLE}#ionViewDidEnter]`);
 
     this.filteredPages = this.app.all_pages.filter((page) => page != 'dev-menu');
+
+    this.platform.ready().then((readySource) => {
+      console.log(`[${this.TITLE}#ionViewDidEnter] readySource`, readySource);
+    });
   }
 
   updateView(from: string): void {
@@ -47,4 +55,22 @@ export class DevMenuPage implements OnInit {
   }
 
   defaultSort(): number { return 0; }
+
+  async showAlert(topic: string, msg: string): Promise<any> {
+    console.log(`[${this.TITLE}#showAlert] topic`, topic);
+    console.log(`[${this.TITLE}#showAlert] msg`, msg);
+
+    const alert = await this.alertController.create({
+      cssClass: 'alerts',
+      header: topic,
+      message: msg,
+      buttons: ['OK']
+    });
+
+    await alert.present();
+
+    const { role } = await alert.onDidDismiss();
+    console.log(`[${this.TITLE}#showAlert] role`, role);
+    return role;
+  }
 }
