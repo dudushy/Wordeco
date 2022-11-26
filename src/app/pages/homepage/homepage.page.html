@@ -1,27 +1,26 @@
-<ion-content fullscreen>
+<ion-content fullscreen [attr.theme]="app.theme">
   <table id="menuTable">
-    <tr>
+    <tr id="logoTr">
       <td colspan="2">
         <img src="assets/icon/wordeco.png">
       </td>
     </tr>
 
-    <tr>
+    <tr id="buttonsTr">
       <td colspan="2">
         <ion-button expand="block" color="hit" (click)="redirectTo('game')">
           PLAY
         </ion-button>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
+
         <ion-button expand="block" color="close" (click)="redirectTo('config')">
           SETTINGS
         </ion-button>
       </td>
     </tr>
 
-    <tr>
+    <br>
+
+    <tr id="infoTr">
       <td>
         <div class="bubble" id="versionDiv">
           <strong>v{{version}}</strong>
