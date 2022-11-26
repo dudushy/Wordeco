@@ -1,7 +1,9 @@
 <ion-app>
   <ion-header [attr.theme]="theme">
     <ion-toolbar>
-      <ion-button slot="start" expand="block" color="dark" (click)="redirectTo('dev-menu', TITLE)">DEV-MENU</ion-button>
+      <ion-icon slot="start" (click)="redirectTo(db.get('last_page'), TITLE)" name="arrow-undo-circle"></ion-icon>
+
+      <ion-button expand="block" color="dark" (click)="redirectTo('dev-menu', TITLE)">DEV-MENU</ion-button>
 
       <ion-title slot="end">{{db.get('current_url')}}</ion-title>
     </ion-toolbar>

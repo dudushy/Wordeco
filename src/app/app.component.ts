@@ -94,11 +94,11 @@ export class AppComponent {
 
     this.router.navigateByUrl(`/${url}`);
 
+    this.db.set('last_page', this.db.get('current_url'));
+    console.log(`[${this.TITLE}#redirectTo] last_page`, this.db.get('last_page'));
+
     this.db.set('current_url', url);
     console.log(`[${this.TITLE}#redirectTo] current_url`, this.db.get('current_url'));
-
-    this.db.set('last_page', url);
-    console.log(`[${this.TITLE}#redirectTo] last_page`, this.db.get('last_page'));
 
     this.updateView(this.TITLE);
   }

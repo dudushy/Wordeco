@@ -2,6 +2,11 @@
 
 ion-header {
   z-index: 1;
+
+  ion-icon {
+    font-size: 13vw;
+    fill: $dark;
+  }
 }
 
 ion-router-outlet {
