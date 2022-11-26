@@ -1,3 +1,18 @@
 <ion-app>
+  <ion-header>
+    <ion-toolbar>
+      <ion-button slot="start" expand="block" color="dark">DEV-MENU</ion-button>
+
+      <ion-button *ngIf="theme == 'light'" (click)="toggleTheme()" color="dark">
+        <ion-icon  name="sunny"></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="theme == 'dark'" (click)="toggleTheme()" color="dark">
+        <ion-icon  name="moon"></ion-icon>
+      </ion-button>
+
+      <ion-title slot="end">{{db.get('current_url')}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
   <ion-router-outlet></ion-router-outlet>
 </ion-app>
