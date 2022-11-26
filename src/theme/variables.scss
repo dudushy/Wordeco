@@ -20,24 +20,26 @@ $close: #ff9801;
 $miss: #810001;
 $hit: #01ff67;
 
-:root {
-  *[theme="dark"] {
-    fill: $light;
-    color: $light;
-    background-color: $dark;
-    --background-color: $dark;
-    background: $dark;
-    --background: $dark;
-  }
-  *[theme="light"] {
-    fill: $dark;
-    color: $dark;
-    background-color: $light;
-    --background-color: $light;
-    background: $light;
-    --background: $light;
-  }
+*[theme="dark"] {
+  fill: $light;
+  color: $light;
+  --color: $light;
+  background-color: $dark;
+  --background-color: $dark;
+  background: $dark;
+  --background: $dark;
+}
+*[theme="light"] {
+  fill: $dark;
+  color: $dark;
+  --color: $dark;
+  background-color: $light;
+  --background-color: $light;
+  background: $light;
+  --background: $light;
+}
 
+:root {
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
