@@ -16,7 +16,10 @@ export class DbService {
   setupDb(): void {
     console.log(`[${this.TITLE}#setupDb]`);
 
-    this.set('theme', 'dark');
+    const theme = this.get('theme');
+    console.log(`[${this.TITLE}#setupDb] theme`, theme);
+
+    if (!theme) { this.set('theme', 'dark'); }
     this.set('base_url', 'homepage');
   }
 
@@ -26,5 +29,9 @@ export class DbService {
 
   set(item: any, value: any): void {
     localStorage.setItem(item, JSON.stringify(value));
+  }
+
+  erase(): void {
+    localStorage.clear();
   }
 }
