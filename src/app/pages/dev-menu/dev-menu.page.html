@@ -1,4 +1,4 @@
-<ion-content fullscreen>
+<ion-content fullscreen [attr.theme]="app.theme">
   <ion-button *ngFor="let page of filteredPages | keyvalue : defaultSort" (click)="redirectTo(page.value)" expand="block">
     {{page.value}}
   </ion-button>
