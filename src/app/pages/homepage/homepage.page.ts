@@ -12,6 +12,7 @@ import { AppComponent } from '../../app.component';
 })
 export class HomepagePage implements OnInit {
   TITLE = 'HomepagePage';
+  version = '0.0.1';
 
   constructor(
     public db: DbService,
