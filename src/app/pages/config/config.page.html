@@ -1,3 +1,35 @@
 <ion-content fullscreen [attr.theme]="app.theme">
+  <ion-item>
+    <ion-label>Rows (chances)</ion-label>
+    <ion-select #rows (ionChange)="updateRows(rows.value)">
+      <ion-select-option value="3">3</ion-select-option>
+      <ion-select-option value="4">4</ion-select-option>
+      <ion-select-option value="5">5</ion-select-option>
+      <ion-select-option value="6">6 (default)</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Columns (letters)</ion-label>
+    <ion-select #columns (ionChange)="updateColumns(columns.value)">
+      <ion-select-option value="3">3</ion-select-option>
+      <ion-select-option value="4">4</ion-select-option>
+      <ion-select-option value="5">5 (default)</ion-select-option>
+      <ion-select-option value="6">6</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Theme</ion-label>
+    <ion-button *ngIf="app.theme == 'light'" (click)="app.toggleTheme()" color="light">
+      <ion-icon  name="moon"></ion-icon>
+    </ion-button>
+    <ion-button *ngIf="app.theme == 'dark'" (click)="app.toggleTheme()" color="dark">
+      <ion-icon  name="sunny"></ion-icon>
+    </ion-button>
+  </ion-item>
+
+  <br>
+
   <ion-button expand="block" color="danger" (click)="eraseData('Warning', 'Do you agree to erase all storage data?')">Erase Data</ion-button>
 </ion-content>

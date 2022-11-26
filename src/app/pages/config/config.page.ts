@@ -15,6 +15,9 @@ import { Platform, AlertController } from '@ionic/angular';
 export class ConfigPage implements OnInit {
   TITLE = 'ConfigPage';
 
+  rows: number = this.db.get('rows') || 6;
+  columns: number = this.db.get('columns') || 5;
+
   constructor(
     public db: DbService,
     private cdr: ChangeDetectorRef,
@@ -102,5 +105,17 @@ export class ConfigPage implements OnInit {
     console.log(`[${this.TITLE}#eraseData] role`, role);
 
     this.updateView(this.TITLE);
+  }
+
+  updateRows(value: any): void {
+    console.log(`[${this.TITLE}#updateRows] rows`, value);
+
+    this.db.set('rows', value);
+  }
+
+  updateColumns(value: any): void {
+    console.log(`[${this.TITLE}#updateColumns] columns`, value);
+
+    this.db.set('columns', value);
   }
 }
