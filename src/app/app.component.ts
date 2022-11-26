@@ -5,6 +5,8 @@ import { DbService } from './services/db/db.service';
 
 import { Router } from '@angular/router';
 
+import { Platform, AlertController } from '@ionic/angular';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -19,6 +21,8 @@ export class AppComponent {
     public db: DbService,
     private router: Router,
     private cdr: ChangeDetectorRef,
+    public platform: Platform,
+    public alertController: AlertController
   ) {
     console.log(`[${this.TITLE}#constructor]`);
 
@@ -43,6 +47,10 @@ export class AppComponent {
 
   ionViewDidEnter(): void {
     console.log(`[${this.TITLE}#ionViewDidEnter]`);
+
+    this.platform.ready().then((readySource) => {
+      console.log(`[${this.TITLE}#ionViewDidEnter] readySource`, readySource);
+    });
   }
 
   toggleTheme(): void {
@@ -96,4 +104,22 @@ export class AppComponent {
   }
 
   defaultSort(): number { return 0; }
+
+  async showAlert(topic: string, msg: string): Promise<any> {
+    console.log(`[${this.TITLE}#showAlert] topic`, topic);
+    console.log(`[${this.TITLE}#showAlert] msg`, msg);
+
+    const alert = await this.alertController.create({
+      cssClass: 'alerts',
+      header: topic,
+      message: msg,
+      buttons: ['OK']
+    });
+
+    await alert.present();
+
+    const { role } = await alert.onDidDismiss();
+    console.log(`[${this.TITLE}#showAlert] role`, role);
+    return role;
+  }
 }
