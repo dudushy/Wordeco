@@ -1,23 +1,45 @@
 <ion-content fullscreen>
-  <div class="top">
-    <ion-item>
-      <h2>VERSION</h2>
-    </ion-item>
-  </div>
+  <table id="menuTable">
+    <tr>
+      <td colspan="2">
+        <img src="assets/icon/wordeco.png">
+      </td>
+    </tr>
 
-  <div class="main">
-    <ion-item>
-      <img src="#">LOGO
-      <ion-button expand="block" color="success">4 LETTERS 2/10</ion-button>
-      <ion-button expand="block" color="success">5 LETTERS 9/10</ion-button>
-      <ion-button expand="block" color="success">CUSTOM</ion-button>
-    </ion-item>
-  </div>
+    <tr>
+      <td colspan="2">
+        <ion-button expand="block" color="hit" (click)="redirectTo('game')">
+          PLAY
+        </ion-button>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <ion-button expand="block" color="close" (click)="redirectTo('config')">
+          SETTINGS
+        </ion-button>
+      </td>
+    </tr>
 
-  <div class="bottom">
-    <ion-item>
-      <ion-button expand="block" color="success">CFG</ion-button>
-      <ion-button expand="block" color="success">BY</ion-button>
-    </ion-item>
-  </div>
+    <tr>
+      <td>
+        <div class="bubble" id="versionDiv">
+          <strong>v{{version}}</strong>
+        </div>
+      </td>
+
+      <td>
+        <div class="bubble" id="madeByDiv">
+          <span>
+            Made by
+            <a href="https://github.com/dudushy" target="_blank">dudushy</a>
+            <br>
+            &
+            <br>
+            <a href="https://github.com/Shiyinochi" target="_blank">Shiyinochi</a>
+          </span>
+        </div>
+      </td>
+    </tr>
+  </table>
 </ion-content>
