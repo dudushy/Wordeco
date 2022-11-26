@@ -1,5 +1,58 @@
 @import "/src/theme/variables.scss";
 
 ion-content {
-  display: block;
+  --background: $idle;
+}
+
+#menuTable {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+  width: 96%;
+  height: 96%;
+  text-align: center;
+  border-radius: 15px;
+  background-color: $background;
+
+  tr,
+  td {
+    width: 100%;
+    height: 100%;
+  }
+
+  // td {
+  //   border: 1px solid #000;
+  // }
+
+  .bubble {
+    // width: 100%;
+    // height: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    background: $foreground;
+    color: $contrast;
+  }
+
+  #versionDiv {
+    display: table-cell;
+    vertical-align: bottom;
+
+    strong {
+      font-size: 1.5rem;
+    }
+  }
+
+  #madeByDiv {
+    display: table-cell;
+    vertical-align: bottom;
+
+    span {
+      font-size: 1rem;
+    }
+
+    a {
+      font-size: 1.2rem;
+    }
+  }
 }
