@@ -1,7 +1,7 @@
 <ion-app>
   <ion-header>
     <ion-toolbar>
-      <ion-button slot="start" expand="block" color="dark">DEV-MENU</ion-button>
+      <ion-button slot="start" expand="block" color="dark" (click)="redirectTo('dev-menu', TITLE)">DEV-MENU</ion-button>
 
       <ion-button *ngIf="theme == 'light'" (click)="toggleTheme()" color="dark">
         <ion-icon  name="sunny"></ion-icon>
